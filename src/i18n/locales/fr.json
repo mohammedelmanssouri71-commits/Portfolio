@@ -1,0 +1,94 @@
+{
+  "nav": {
+    "about": "Profil",
+    "skills": "Compétences",
+    "projects": "Projets",
+    "certifications": "Certifications",
+    "contact": "Contact"
+  },
+  "hero": {
+    "greeting": "Bonjour, je suis",
+    "roles": ["Développeur Full-Stack", "React Developer", "Laravel Developer", "Stagiaire Digital"],
+    "subtitle": "Passionné par le web et les nouvelles technologies. À la recherche d'un stage pour contribuer à des projets concrets en entreprise.",
+    "cta_projects": "Voir mes projets",
+    "cta_contact": "Me contacter",
+    "cta_download" : "Télécharger CV",
+    "available": "Disponible pour un stage",
+    "stats": {
+      "study": "An d'études",
+      "tech": "Technologies",
+      "project": "Projet actif"
+    }
+  },
+  "about": {
+    "section_index": "// 01",
+    "title": "Mon Profil",
+    "description": "Stagiaire en développement digital, je maîtrise les technologies full-stack modernes. Motivé par les défis techniques et l'innovation, je cherche à acquérir une expérience professionnelle significative.",
+    "formation_title": "Formation",
+    "formation": [
+      { "year": "2025–", "label": "Programme Innovation Entrepreneuriale", "org": "CMC Tanger-Tétouan-Al Hoceima" },
+      { "year": "2024–", "label": "Technicien Spécialisé Full-Stack", "org": "CMC Tanger-Tétouan-Al Hoceima" },
+      { "year": "2022", "label": "Bac Sciences Mathématiques B", "org": "Lycée Moulay Youssef, Tanger" }
+    ],
+    "languages_title": "Langues",
+    "languages": [
+      { "flag": "🇲🇦", "name": "Arabe", "level": "Langue maternelle", "pct": 100 },
+      { "flag": "🇫🇷", "name": "Français", "level": "Bon niveau", "pct": 75 },
+      { "flag": "🇬🇧", "name": "Anglais", "level": "Technique", "pct": 60 }
+    ],
+    "softskills_title": "Soft Skills",
+    "softskills": ["Travail en équipe", "Autonomie", "Organisation", "Gestion du temps", "Esprit d'analyse"],
+    "interests_title": "Centres d'intérêt",
+    "interests": ["Développement web", "Innovation digitale", "Entrepreneuriat", "Auto-formation"]
+  },
+  "skills": {
+    "section_index": "// 02",
+    "title": "Compétences Techniques",
+    "subtitle": "Un arsenal technologique moderne pour créer des solutions complètes",
+    "all_label": "Toutes les technologies",
+    "categories": {
+      "languages": "Langages",
+      "frameworks": "Frameworks",
+      "databases": "Bases de données",
+      "devops": "DevOps",
+      "tools": "Outils"
+    }
+  },
+  "projects": {
+    "section_index": "// 03",
+    "title": "Projets",
+    "subtitle": "Des réalisations concrètes avec des technologies modernes",
+    "demo": "Démo Live",
+    "github": "GitHub",
+    "in_progress": "En cours",
+    "github_cta_title": "Voir tous mes projets",
+    "github_cta_sub": "Retrouvez mes repositories sur GitHub",
+    "github_cta_btn": "Mon profil GitHub"
+  },
+  "certifications": {
+    "section_index": "// 04",
+    "title": "Certifications",
+    "subtitle": "Parcours de formation et accréditations",
+    "view": "Voir le certificat"
+  },
+  "contact": {
+    "section_index": "// 05",
+    "title": "Contact",
+    "subtitle": "Travaillons ensemble sur votre prochain projet",
+    "name": "Votre nom",
+    "email": "Votre email",
+    "message": "Votre message",
+    "send": "Envoyer le message",
+    "whatsapp": "Contacter via WhatsApp",
+    "sending": "Envoi en cours...",
+    "sent": "Message envoyé !",
+    "error": "Veuillez patienter 60s avant d'envoyer un autre message.",
+    "success": "Merci ! Je vous répondrai dans les plus brefs délais.",
+    "info_email": "mohammedelmanssouri71@gmail.com",
+    "info_phone": "+212 613 967 856"
+  },
+  "footer": {
+    "rights": "Tous droits réservés.",
+    "made_with": "Fait avec"
+  }
+}

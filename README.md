@@ -1,70 +1,203 @@
-# Getting Started with Create React App
+# Mohammed El-Manssouri — Portfolio
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Portfolio professionnel full-stack développé avec **React 18** et un moteur i18n personnalisé (FR/EN).
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## 📁 Architecture du projet
 
-### `npm start`
+```
+src/
+├── i18n/
+│   ├── index.jsx            # Moteur i18n (I18nProvider + useI18n hook)
+│   └── locales/
+│       ├── fr.json          # Traductions françaises
+│       └── en.json          # Traductions anglaises
+│
+├── context/
+│   └── ThemeContext.jsx     # Dark / Light mode (Provider + useTheme hook)
+│
+├── components/
+│   ├── Navbar.jsx           # Navigation fixe responsive
+│   ├── Footer.jsx           # Pied de page + réseaux sociaux
+│   └── ui/
+│       ├── TypewriterText.jsx   # Effet typewriter animé
+│       ├── AnimatedCounter.jsx  # Compteur animé au scroll
+│       ├── SkillBar.jsx         # Barre de compétence animée
+│       ├── ProjectCard.jsx      # Carte projet avec hover
+│       └── CertCard.jsx         # Carte certification
+│
+├── pages/
+│   ├── Hero.jsx             # Section d'accueil
+│   ├── About.jsx            # Profil, formation, langues
+│   ├── Skills.jsx           # Compétences techniques par catégorie
+│   ├── Projects.jsx         # Projets + lien GitHub
+│   ├── Certifications.jsx   # Diplômes et certifications
+│   └── Contact.jsx          # Formulaire + WhatsApp + anti-spam
+│
+├── data/
+│   ├── skills.js            # Données des compétences
+│   ├── projects.js          # Données des projets
+│   └── certifications.js    # Données des certifications
+│
+├── hooks/
+│   └── useIntersectionObserver.js  # Hook scroll-triggered visibility
+│
+├── styles/
+│   └── globals.css          # CSS variables, reset, tokens de design
+│
+└── App.jsx                  # Racine : providers + layout
+```
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 🚀 Lancer le projet
 
-### `npm test`
+```bash
+# 1. Installer les dépendances
+npm install
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+# 2. Démarrer le serveur de développement
+npm start
+# → http://localhost:3000
+```
 
-### `npm run build`
+---
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 🌐 i18n — Ajouter une traduction
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+1. Éditer `src/i18n/locales/fr.json` et `en.json`
+2. Utiliser `useI18n()` dans vos composants :
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```jsx
+import { useI18n } from "../i18n";
 
-### `npm run eject`
+function MyComponent() {
+  const { t, lang, setLang } = useI18n();
+  return <h1>{t("hero.greeting")}</h1>;
+}
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+3. Pour obtenir un tableau JSON : `t("about.formation")` retourne le tableau directement.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+---
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## 🎨 Thème
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Basculer dark/light via `useTheme()` :
 
-## Learn More
+```jsx
+import { useTheme } from "../context/ThemeContext";
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+function Toggle() {
+  const { dark, toggle } = useTheme();
+  return <button onClick={toggle}>{dark ? "☀️" : "🌙"}</button>;
+}
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Le thème est persisté dans `localStorage` et suit `prefers-color-scheme` par défaut.
 
-### Code Splitting
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## ➕ Ajouter un projet
 
-### Analyzing the Bundle Size
+Éditer `src/data/projects.js` :
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+```js
+{
+  id: "mon-projet",
+  title:        "Titre en français",
+  title_en:     "Title in English",
+  description:  "Description FR...",
+  description_en: "Description EN...",
+  tech: ["React", "Node.js"],
+  github: "https://github.com/...",
+  demo:   "https://mon-site.com",     // null si pas de démo
+  inProgress: false,
+  accentColor: "#ff6b6b",
+  icon: "🛒",
+}
+```
 
-### Making a Progressive Web App
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## 📦 Déploiement — GitHub Pages
 
-### Advanced Configuration
+### 1. Mettre à jour `package.json`
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+```json
+"homepage": "https://<USERNAME>.github.io/<REPO_NAME>"
+```
 
-### Deployment
+### 2. Créer le dépôt GitHub et pousser le code
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+```bash
+git init
+git add .
+git commit -m "feat: initial portfolio"
+git remote add origin https://github.com/<USERNAME>/<REPO_NAME>.git
+git push -u origin main
+```
 
-### `npm run build` fails to minify
+### 3. Déployer
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+```bash
+npm run deploy
+```
+
+Cette commande :
+- Exécute `npm run build` → génère le dossier `build/`
+- Pousse `build/` sur la branche `gh-pages` via le package `gh-pages`
+
+### 4. Activer GitHub Pages
+
+Dans votre dépôt GitHub :
+- **Settings** → **Pages**
+- **Source** : branche `gh-pages`, dossier `/ (root)`
+- Cliquer **Save**
+
+Votre site sera disponible à l'URL définie dans `homepage` après 1–2 minutes.
+
+### 5. Mises à jour futures
+
+```bash
+# Modifier le code, puis :
+npm run deploy
+```
+
+---
+
+## 📬 Intégration email (Contact)
+
+Le formulaire simule l'envoi. Pour un vrai envoi, intégrer **EmailJS** :
+
+```bash
+npm install @emailjs/browser
+```
+
+Dans `Contact.jsx`, remplacer le `setTimeout` par :
+
+```js
+import emailjs from "@emailjs/browser";
+
+emailjs.send(
+  "SERVICE_ID",
+  "TEMPLATE_ID",
+  { name: form.name, email: form.email, message: form.message },
+  "PUBLIC_KEY"
+).then(() => setStatus("sent"));
+```
+
+Créer un compte gratuit sur [emailjs.com](https://emailjs.com) pour obtenir vos clés.
+
+---
+
+## 🔧 Technologies
+
+| Catégorie | Outil |
+|-----------|-------|
+| UI | React 18 |
+| i18n | Moteur maison (Context + JSON) |
+| Styles | CSS Variables + CSS Modules |
+| Animations | CSS Keyframes + Intersection Observer |
+| Déploiement | GitHub Pages + gh-pages |

@@ -1,0 +1,94 @@
+{
+  "nav": {
+    "about": "Profile",
+    "skills": "Skills",
+    "projects": "Projects",
+    "certifications": "Certifications",
+    "contact": "Contact"
+  },
+  "hero": {
+    "greeting": "Hi, I'm",
+    "roles": ["Full-Stack Developer", "React Developer", "Laravel Developer", "Digital Intern"],
+    "subtitle": "Passionate about web and new technologies. Looking for an internship to contribute to real-world projects and grow professionally.",
+    "cta_projects": "View my projects",
+    "cta_contact": "Contact me",
+    "cta_download" : "Download CV",
+    "available": "Available for internship",
+    "stats": {
+      "study": "Year of study",
+      "tech": "Technologies",
+      "project": "Active project"
+    }
+  },
+  "about": {
+    "section_index": "// 01",
+    "title": "My Profile",
+    "description": "Digital development trainee mastering modern full-stack technologies. Motivated by technical challenges and innovation, I seek meaningful professional experience.",
+    "formation_title": "Education",
+    "formation": [
+      { "year": "2025–", "label": "Entrepreneurial Innovation Program", "org": "CMC Tanger-Tétouan-Al Hoceima" },
+      { "year": "2024–", "label": "Specialized Full-Stack Technician", "org": "CMC Tanger-Tétouan-Al Hoceima" },
+      { "year": "2022", "label": "High School Diploma – Math Sciences B", "org": "Lycée Moulay Youssef, Tanger" }
+    ],
+    "languages_title": "Languages",
+    "languages": [
+      { "flag": "🇲🇦", "name": "Arabic", "level": "Native language", "pct": 100 },
+      { "flag": "🇫🇷", "name": "French", "level": "Good level", "pct": 75 },
+      { "flag": "🇬🇧", "name": "English", "level": "Technical reading", "pct": 60 }
+    ],
+    "softskills_title": "Soft Skills",
+    "softskills": ["Teamwork", "Autonomy", "Organization", "Time management", "Analytical mindset"],
+    "interests_title": "Interests",
+    "interests": ["Web development", "Digital innovation", "Entrepreneurship", "Self-learning"]
+  },
+  "skills": {
+    "section_index": "// 02",
+    "title": "Technical Skills",
+    "subtitle": "A modern tech arsenal to build complete solutions",
+    "all_label": "All technologies",
+    "categories": {
+      "languages": "Languages",
+      "frameworks": "Frameworks",
+      "databases": "Databases",
+      "devops": "DevOps",
+      "tools": "Tools"
+    }
+  },
+  "projects": {
+    "section_index": "// 03",
+    "title": "Projects",
+    "subtitle": "Concrete achievements with modern technologies",
+    "demo": "Live Demo",
+    "github": "GitHub",
+    "in_progress": "In Progress",
+    "github_cta_title": "See all my projects",
+    "github_cta_sub": "Find all my repositories on GitHub",
+    "github_cta_btn": "My GitHub profile"
+  },
+  "certifications": {
+    "section_index": "// 04",
+    "title": "Certifications",
+    "subtitle": "Training path and accreditations",
+    "view": "View certificate"
+  },
+  "contact": {
+    "section_index": "// 05",
+    "title": "Contact",
+    "subtitle": "Let's work together on your next project",
+    "name": "Your name",
+    "email": "Your email",
+    "message": "Your message",
+    "send": "Send message",
+    "whatsapp": "Contact via WhatsApp",
+    "sending": "Sending...",
+    "sent": "Message sent!",
+    "error": "Please wait 60s before sending another message.",
+    "success": "Thank you! I will reply as soon as possible.",
+    "info_email": "mohammedelmanssouri71@gmail.com",
+    "info_phone": "+212 613 967 845"
+  },
+  "footer": {
+    "rights": "All rights reserved.",
+    "made_with": "Made with"
+  }
+}
