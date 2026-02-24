@@ -69,6 +69,7 @@ body {
   transition: background var(--transition), color var(--transition);
 }
 
+
 ::-webkit-scrollbar { width: 3px; }
 ::-webkit-scrollbar-track { background: var(--bg); }
 ::-webkit-scrollbar-thumb { background: var(--accent); border-radius: 2px; }
