@@ -2,7 +2,7 @@ import { useI18n } from "../i18n";
 
 const SOCIAL_LINKS = [
   { icon: <i class="fa-brands fa-github"></i>, label: "GitHub",   href: "https://github.com/mohammedelmanssouri71-commits/" },
-  { icon: <i class="fa-brands fa-linkedin"></i>, label: "LinkedIn", href: "https://linkedin.com" },
+  { icon: <i class="fa-brands fa-linkedin"></i>, label: "LinkedIn", href: "https://linkedin.com/in/mohammed-el-manssouri-21120b33b" },
   { icon: <i class="fa-regular fa-envelope"></i>, label: "Email",    href: "mailto:mohammedelmanssouri71@gmail.com" },
 ];
 
