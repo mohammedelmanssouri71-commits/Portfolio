@@ -274,10 +274,7 @@ export function Hero() {
             variants={letterContainerVariants}
             style={{
               display: "inline-flex",
-              background: "linear-gradient(135deg, var(--accent), var(--accent2))",
-              WebkitBackgroundClip: "text",
-              WebkitTextFillColor: "transparent",
-              backgroundClip: "text",
+              color: "var(--accent)",
             }}
           >
             <SplitLetters text="El-Manssouri" />

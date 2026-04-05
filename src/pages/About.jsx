@@ -60,7 +60,6 @@ export function About() {
       <div className="container">
         {/* Section header */}
         <AnimatedSection>
-          <p className="section-index">{t("about.section_index")}</p>
           <RevealText as="h2" className="section-title">
             {t("about.title")}
           </RevealText>

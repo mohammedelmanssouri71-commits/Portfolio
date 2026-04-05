@@ -21,6 +21,9 @@
   --font-display: 'Clash Display', sans-serif;
   --font-body:    'Satoshi', sans-serif;
   --font-mono:    'JetBrains Mono', monospace;
+  --cursor-dot:   #fff;
+  --cursor-ring:  rgba(255, 255, 255, 0.3);
+  --cursor-ring-hover: rgba(255, 255, 255, 0.6);
 }
 
 /* ── Dark Theme (Default) ──────────────────────────────────────── */
@@ -51,12 +54,15 @@
   --text3:        #9090A8;
   --card:         rgba(0, 0, 0, 0.03);
   --card-hover:   rgba(0, 0, 0, 0.06);
-  --border:       rgba(0, 0, 0, 0.08);
+  --border:       rgba(0, 0, 0, 0.1);
   --border-hover: rgba(99, 102, 241, 0.5);
   --bar-bg:       rgba(0, 0, 0, 0.08);
-  --nav-bg:       rgba(248, 248, 246, 0.85);
+  --nav-bg:       rgba(240, 240, 245, 0.7);
   --shadow:       0 8px 32px rgba(0, 0, 0, 0.1);
   --shadow-accent: 0 8px 40px rgba(99, 102, 241, 0.12);
+  --cursor-dot:   #0a0a0f;
+  --cursor-ring:  rgba(10, 10, 15, 0.3);
+  --cursor-ring-hover: rgba(10, 10, 15, 0.6);
 }
 
 /* ══════════════════════════════════════════════════════════════════

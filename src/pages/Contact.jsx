@@ -61,8 +61,9 @@ export function Contact() {
     <section id="contact" className="section-wrapper">
       <div className="container" style={{ maxWidth: "720px" }}>
         <AnimatedSection>
-          <p className="section-index">{t("contact.section_index")}</p>
-          <RevealText as="h2" className="section-title">{t("contact.title")}</RevealText>
+          <RevealText as="h2" className="section-title">
+            {t("contact.title")}
+          </RevealText>
           <RevealText as="p" className="section-subtitle" wordByWord delay={0.2}>{t("contact.subtitle")}</RevealText>
         </AnimatedSection>
 

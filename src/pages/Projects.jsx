@@ -160,7 +160,6 @@ export function Projects() {
     <section id="projects" className="section-wrapper">
       <div className="container">
         <AnimatedSection>
-          <p className="section-index">{t("projects.section_index")}</p>
           <RevealText as="h2" className="section-title">
             {t("projects.title")}
           </RevealText>

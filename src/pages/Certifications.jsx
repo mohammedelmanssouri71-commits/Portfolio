@@ -65,8 +65,9 @@ export function Certifications() {
     <section id="certifications" className="section-wrapper section-wrapper--alt">
       <div className="container">
         <AnimatedSection>
-          <p className="section-index">{t("certifications.section_index")}</p>
-          <RevealText as="h2" className="section-title">{t("certifications.title")}</RevealText>
+          <RevealText as="h2" className="section-title">
+            {t("certifications.title")}
+          </RevealText>
           <RevealText as="p" className="section-subtitle" wordByWord delay={0.2}>{t("certifications.subtitle")}</RevealText>
         </AnimatedSection>
         <div ref={timelineRef} style={{ position: "relative" }}>

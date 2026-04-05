@@ -59,6 +59,8 @@ function SkillBadge({ skill }) {
         whiteSpace: "nowrap",
         position: "relative",
         overflow: "hidden",
+        flexShrink: 0,
+        minWidth: "max-content",
       }}
     >
       <img
@@ -166,7 +168,6 @@ export function Skills() {
     <section id="skills" className="section-wrapper section-wrapper--alt">
       <div className="container">
         <AnimatedSection>
-          <p className="section-index">{t("skills.section_index")}</p>
           <RevealText as="h2" className="section-title">
             {t("skills.title")}
           </RevealText>
