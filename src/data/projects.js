@@ -27,7 +27,7 @@ export const projectsData = [
     ],
     github: "https://github.com/mohammedelmanssouri71-commits/Movix",
     demo: null, // Ajouter un lien si disponible
-    inProgress: true,
+    inProgress: false,
     accentColor: "#ff4500",
     icon: "🎬"
   },
@@ -41,7 +41,7 @@ export const projectsData = [
     "Next.js",
     "React.js",
     "Tailwind CSS",
-    "Laravel API",
+    "Node.js",
     "PostgreSQL",
     "pgvector",
     "OpenAI API"
