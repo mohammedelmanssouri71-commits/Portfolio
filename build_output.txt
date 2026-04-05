@@ -1,0 +1,6 @@
+﻿Creating an optimized production build...
+Failed to compile.
+
+Attempted import error: 'Github' is not exported from 'lucide-react' (imported as 'Github').
+
+
