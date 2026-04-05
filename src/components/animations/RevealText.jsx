@@ -1,20 +1,16 @@
-import { useRef } from "react";
+import { useRef, useMemo } from "react";
 import { motion, useInView } from "framer-motion";
 
 /* ──────────────────────────────────────────────────────────────────
    RevealText — Masked slide-up text reveal
-   Uses clipPath animation: inset(100% 0 0 0) → inset(0% 0 0 0)
-   Can reveal word-by-word with stagger, or as a single block.
    ────────────────────────────────────────────────────────────────── */
 
 const wordVariants = {
   hidden: {
-    clipPath: "inset(100% 0 0 0)",
     y: 20,
     opacity: 0,
   },
   visible: {
-    clipPath: "inset(0% 0 0 0)",
     y: 0,
     opacity: 1,
     transition: {
@@ -33,6 +29,14 @@ const containerVariants = {
   },
 };
 
+// Create a safe motion component factory
+const getMotionComponent = (as) => {
+  if (typeof as === 'string' && motion[as]) {
+    return motion[as];
+  }
+  return motion.div;
+};
+
 export function RevealText({
   children,
   as = "h2",
@@ -42,8 +46,9 @@ export function RevealText({
   delay = 0,
 }) {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, amount: 0.5 });
-  const Tag = motion[as] || motion.div;
+  const isInView = useInView(ref, { once: true, amount: 0.1 });
+  
+  const Tag = useMemo(() => getMotionComponent(as), [as]);
 
   if (wordByWord && typeof children === "string") {
     const words = children.split(" ");
@@ -79,14 +84,12 @@ export function RevealText({
     <Tag
       ref={ref}
       initial={{
-        clipPath: "inset(100% 0 0 0)",
         y: 30,
         opacity: 0,
       }}
       animate={
         isInView
           ? {
-              clipPath: "inset(0% 0 0 0)",
               y: 0,
               opacity: 1,
               transition: {

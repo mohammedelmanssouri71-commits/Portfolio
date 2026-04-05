@@ -3,6 +3,7 @@ import { useI18n } from "../i18n";
 import { MagneticButton } from "./animations/MagneticButton";
 import { Mail } from "lucide-react";
 import { Github, Linkedin } from "./ui/BrandIcons";
+import logoImg from "../assets/logo.png";
 
 const SOCIAL_LINKS = [
   { icon: <Github size={18} />, label: "GitHub", href: "https://github.com/mohammedelmanssouri71-commits/" },
@@ -36,8 +37,8 @@ export function Footer() {
     >
       <div style={{ maxWidth: "1000px", margin: "0 auto", display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: "28px" }}>
         <motion.div variants={itemVariant}>
-          <div style={{ fontFamily: "var(--font-display)", fontWeight: 800, fontSize: "20px", marginBottom: "8px" }}>
-            <span style={{ color: "var(--accent)" }}>M</span>OHAMMED
+          <div style={{ marginBottom: "16px" }}>
+            <img src={logoImg} alt="Logo" style={{ height: "48px", width: "auto", display: "block" }} />
           </div>
           <p style={{ color: "var(--text2)", fontSize: "13px", lineHeight: 1.8 }}>
             © {new Date().getFullYear()} Mohammed El-Manssouri. {t("footer.rights")}

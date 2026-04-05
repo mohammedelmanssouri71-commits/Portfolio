@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import logoImg from "../../assets/logo.png";
 
 /* ──────────────────────────────────────────────────────────────────
    PageTransition — Full-screen curtain lift overlay
@@ -44,14 +45,12 @@ export function PageTransition({ children }) {
               animate={{ opacity: 0, scale: 0.8 }}
               transition={{ duration: 0.4, delay: 0.6 }}
               style={{
-                fontFamily: "var(--font-display)",
-                fontSize: "clamp(24px, 5vw, 42px)",
-                fontWeight: 800,
-                color: "#E8E8F2",
-                letterSpacing: "-0.02em",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
               }}
             >
-              <span style={{ color: "#6366F1" }}>M</span>OHAMMED
+              <img src={logoImg} alt="Logo" style={{ height: "80px", width: "auto" }} />
             </motion.div>
           </motion.div>
         )}

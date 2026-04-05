@@ -4,6 +4,7 @@ import { useI18n } from "../i18n";
 import { useTheme } from "../context/ThemeContext";
 import { MagneticButton } from "./animations/MagneticButton";
 import { Sun, Moon, Menu, X, Globe } from "lucide-react";
+import logoImg from "../assets/logo.png";
 
 const NAV_SECTIONS = ["about", "skills", "projects", "certifications", "contact"];
 
@@ -77,10 +78,14 @@ export function Navbar() {
       >
         {/* Logo with hover rotation */}
         <MagneticButton onClick={() => scrollTo("hero")} className="btn--ghost"
-          style={{ background: "none", border: "none", fontFamily: "var(--font-display)", fontWeight: 800, fontSize: "18px", color: "var(--text)", padding: "4px 8px" }}>
-          <motion.span whileHover={{ rotateZ: 10 }} transition={{ type: "spring", damping: 10, stiffness: 200 }} style={{ display: "inline-block" }}>
-            <span style={{ color: "var(--accent)" }}>M</span><span>OHAMMED</span>
-          </motion.span>
+          style={{ background: "none", border: "none", padding: "4px 8px", display: "flex", alignItems: "center" }}>
+          <motion.img 
+            src={logoImg} 
+            alt="Logo" 
+            whileHover={{ scale: 1.05, rotateZ: 5 }} 
+            transition={{ type: "spring", damping: 10, stiffness: 200 }} 
+            style={{ height: "40px", width: "auto", display: "block" }} 
+          />
         </MagneticButton>
 
         {/* Desktop links with active indicator */}
