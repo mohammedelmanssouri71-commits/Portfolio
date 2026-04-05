@@ -1,11 +1,11 @@
 export const certificationsData = [
   {
-    id: "innovation",
-    title:    "Programme d'Innovation Entrepreneuriale",
-    title_en: "Entrepreneurial Innovation Program",
-    issuer:   "CMC Tanger-Tétouan-Al Hoceima",
-    date:     "2025 –",
-    icon:     "🚀",
+    id: "bac",
+    title:    "Baccalauréat Sciences Mathématiques B",
+    title_en: "High School Diploma – Math Sciences B",
+    issuer:   "Lycée Technique Moulay Youssef, Tanger",
+    date:     "2022",
+    icon:     "📜",
     link:     null,
   },
   {
@@ -18,12 +18,12 @@ export const certificationsData = [
     link:     null,
   },
   {
-    id: "bac",
-    title:    "Baccalauréat Sciences Mathématiques B",
-    title_en: "High School Diploma – Math Sciences B",
-    issuer:   "Lycée Technique Moulay Youssef, Tanger",
-    date:     "2022",
-    icon:     "📜",
+    id: "innovation",
+    title:    "Programme d'Innovation Entrepreneuriale",
+    title_en: "Entrepreneurial Innovation Program",
+    issuer:   "CMC Tanger-Tétouan-Al Hoceima",
+    date:     "2025 –",
+    icon:     "🚀",
     link:     null,
   },
 ];
