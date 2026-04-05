@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import { useRef } from "react";
 import { motion, useMotionValue, useSpring } from "framer-motion";
 
 /* ──────────────────────────────────────────────────────────────────
@@ -41,7 +41,6 @@ export function TiltCard({
   };
 
   const handleMouseLeave = () => {
-    setIsHovered(false);
     rotateX.set(0);
     rotateY.set(0);
   };
@@ -58,7 +57,6 @@ export function TiltCard({
         ref={ref}
         className="tilt-card-inner"
         onMouseMove={handleMouseMove}
-        onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={handleMouseLeave}
         style={{
           rotateX: springRotateX,
