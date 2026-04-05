@@ -140,7 +140,7 @@ function SplitLetters({ text, className = "", style = {} }) {
     <motion.span
       variants={letterContainerVariants}
       className={className}
-      style={{ display: "inline-flex", flexWrap: "wrap", ...style }}
+      style={{ display: "inline-flex", whiteSpace: "nowrap", ...style }}
     >
       {text.split("").map((char, i) => (
         <motion.span
@@ -257,17 +257,19 @@ export function Hero() {
         <motion.h1
           variants={letterContainerVariants}
           style={{
-            fontSize: "clamp(40px, 7.5vw, 88px)",
+            fontSize: "clamp(36px, 6.5vw, 88px)",
             fontWeight: 800,
             lineHeight: 1.05,
             letterSpacing: "-0.03em",
             marginBottom: "16px",
             fontFamily: "var(--font-display)",
             perspective: "600px",
+            display: "flex",
+            flexWrap: "wrap",
+            columnGap: "16px",
           }}
         >
           <SplitLetters text="Mohammed" />
-          <br />
           <motion.span
             variants={letterContainerVariants}
             style={{

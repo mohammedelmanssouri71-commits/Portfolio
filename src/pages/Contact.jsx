@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import { useState } from "react";
 import { motion } from "framer-motion";
 import { useI18n } from "../i18n";
 import { AnimatedSection } from "../components/animations/AnimatedSection";

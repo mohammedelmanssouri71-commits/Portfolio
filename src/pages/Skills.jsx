@@ -14,11 +14,6 @@ import { skillsData } from "../data/skills";
    - Skill bars with animated fill
    ══════════════════════════════════════════════════════════════════ */
 
-const tabVariants = {
-  inactive: { color: "var(--text2)" },
-  active: { color: "#fff" },
-};
-
 const skillBarContainerVariants = {
   hidden: {},
   visible: {

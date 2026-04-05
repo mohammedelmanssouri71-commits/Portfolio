@@ -18,7 +18,6 @@ export function TiltCard({
   glowBorder = true,
 }) {
   const ref = useRef(null);
-  const [isHovered, setIsHovered] = useState(false);
 
   const rotateX = useMotionValue(0);
   const rotateY = useMotionValue(0);
