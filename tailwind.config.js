@@ -16,9 +16,9 @@ module.exports = {
         border: "var(--border)",
       },
       fontFamily: {
-        display: ["'Clash Display'", "sans-serif"],
-        body: ["'Satoshi'", "sans-serif"],
-        mono: ["'JetBrains Mono'", "monospace"],
+        display: ["'JetBrains Mono'", "'Fira Code'", "monospace"],
+        body: ["'Inter'", "sans-serif"],
+        mono: ["'JetBrains Mono'", "'Fira Code'", "monospace"],
       },
       borderRadius: {
         sm: "8px",

@@ -1,0 +1,202 @@
+/* ══════════════════════════════════════════════════════════════════
+   BOOT SCREEN — Terminal initialization sequence
+   Pure CSS animations. No libraries.
+   Phases: cursor → typewriter → glitch → dissolve → hero reveal
+   ══════════════════════════════════════════════════════════════════ */
+
+/* ── Fullscreen overlay ───────────────────────────────────────── */
+.boot-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 10001;
+  background: #0a0e1a;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+/* Scanline texture on boot screen (CRT feel) */
+.boot-overlay::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+  background: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 2px,
+    rgba(0, 212, 255, 0.018) 2px,
+    rgba(0, 212, 255, 0.018) 4px
+  );
+}
+
+/* Subtle CRT vignette — darker edges */
+.boot-overlay::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 2;
+  background: radial-gradient(
+    ellipse at center,
+    transparent 60%,
+    rgba(0, 0, 0, 0.35) 100%
+  );
+}
+
+/* ── Terminal text container ──────────────────────────────────── */
+.boot-terminal {
+  position: relative;
+  z-index: 3;
+  padding: clamp(60px, 12vh, 140px) clamp(24px, 6vw, 80px);
+  font-family: 'JetBrains Mono', 'Fira Code', monospace;
+  font-size: clamp(12px, 1.5vw, 16px);
+  font-variant-ligatures: none;       /* prevent monospace ligatures */
+  line-height: 2.2;
+  width: 100%;
+}
+
+/* ── Line styling ────────────────────────────────────────────── */
+.boot-line {
+  white-space: pre;
+  min-height: 1em;
+}
+
+.boot-text {
+  color: #c8d6e5;
+}
+
+/* ── [OK] tag — flashes in with cyan glow ────────────────────── */
+.boot-tag {
+  color: #00d4ff;
+  font-weight: 700;
+  text-shadow: 0 0 10px rgba(0, 212, 255, 0.5);
+  animation: bootTagIn 0.15s ease-out forwards;
+}
+
+@keyframes bootTagIn {
+  from { opacity: 0; transform: translateX(-6px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+
+/* ── Blinking cursor ─────────────────────────────────────────── */
+.boot-cursor {
+  color: #00d4ff;
+  font-weight: 700;
+  text-shadow: 0 0 8px rgba(0, 212, 255, 0.6);
+  animation: bootCursorBlink 0.6s step-end infinite;
+}
+
+@keyframes bootCursorBlink {
+  0%, 100% { opacity: 1; }
+  50%      { opacity: 0; }
+}
+
+/* ── Phase 3: Glitch — clip-path slices + skew + hue shift ───── */
+.boot-glitch {
+  animation: bootGlitch 0.3s linear forwards;
+}
+
+@keyframes bootGlitch {
+  0%   {
+    transform: translate(0) skewX(0);
+    clip-path: inset(0 0 0 0);
+    filter: none;
+    opacity: 1;
+  }
+  8%   {
+    transform: translate(-5px, 0) skewX(-2deg);
+    clip-path: inset(15% 0 55% 0);
+    filter: hue-rotate(90deg) saturate(2);
+    opacity: 0.9;
+  }
+  14%  {
+    transform: translate(6px, 0) skewX(1deg);
+    clip-path: inset(62% 0 8% 0);
+    filter: hue-rotate(-60deg);
+  }
+  18%  {
+    transform: translate(0);
+    clip-path: inset(0 0 0 0);
+    filter: none;
+    opacity: 0.65;
+  }
+  28%  {
+    transform: translate(4px, 0) skewX(3deg);
+    clip-path: inset(35% 0 30% 0);
+    filter: hue-rotate(120deg) brightness(1.4);
+    opacity: 0.85;
+  }
+  34%  {
+    transform: translate(-4px, 0);
+    clip-path: inset(5% 0 75% 0);
+    filter: hue-rotate(-90deg);
+  }
+  40%  {
+    transform: translate(0);
+    clip-path: inset(0 0 0 0);
+    filter: none;
+    opacity: 1;
+  }
+  55%  {
+    transform: translate(-3px, 0) skewX(-1deg);
+    clip-path: inset(48% 0 18% 0);
+    filter: brightness(1.6);
+    opacity: 0.8;
+  }
+  62%  {
+    transform: translate(3px, 0);
+    clip-path: inset(78% 0 5% 0);
+    filter: none;
+    opacity: 0.9;
+  }
+  70%  {
+    transform: translate(0);
+    clip-path: inset(0 0 0 0);
+    filter: none;
+    opacity: 1;
+  }
+  100% {
+    transform: translate(0) skewX(0);
+    clip-path: inset(0 0 0 0);
+    filter: none;
+    opacity: 1;
+  }
+}
+
+/* ── Phase 4: Dissolve — blur out ────────────────────────────── */
+.boot-dissolve {
+  animation: bootDissolve 0.7s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+  pointer-events: none;
+}
+
+@keyframes bootDissolve {
+  from { opacity: 1; filter: blur(0px); }
+  to   { opacity: 0; filter: blur(6px); }
+}
+
+/* ── Content reveal (fades in beneath dissolving overlay) ─────── */
+.boot-content-reveal {
+  animation: bootContentIn 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+
+@keyframes bootContentIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+/* ── Reduced motion: skip everything ─────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  .boot-overlay,
+  .boot-glitch,
+  .boot-dissolve,
+  .boot-content-reveal,
+  .boot-cursor,
+  .boot-tag {
+    animation: none !important;
+    transition: none !important;
+    opacity: 1 !important;
+    filter: none !important;
+  }
+}
