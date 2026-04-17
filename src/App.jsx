@@ -7,7 +7,7 @@ import { Hero } from "./pages/Hero";
 import { About } from "./pages/About";
 import { Skills } from "./pages/Skills";
 import { Projects } from "./pages/Projects";
-import { Certifications } from "./pages/Certifications";
+// import { Certifications } from "./pages/Certifications";
 import { Contact } from "./pages/Contact";
 import { MagneticCursor } from "./components/animations/MagneticCursor";
 import { BootSequence } from "./components/animations/BootScreen";
