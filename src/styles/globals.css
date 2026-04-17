@@ -2,67 +2,67 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://api.fontshare.com/v2/css?f[]=clash-display@600,700,400,500&f[]=satoshi@900,700,500,300,400&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&display=swap');
+/* ── Fonts: JetBrains Mono (headings/mono), Fira Code (alt mono), Inter (body) ── */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&family=Fira+Code:wght@400;500;600;700&display=swap');
 
 /* ══════════════════════════════════════════════════════════════════
-   CSS CUSTOM PROPERTIES — Design Tokens
+   CSS CUSTOM PROPERTIES — Design Tokens (Cyber Blue Terminal DNA)
    ══════════════════════════════════════════════════════════════════ */
 
 :root {
-  --accent:       #6366F1;
-  --accent2:      #22D3EE;
-  --accent-glow:  rgba(99, 102, 241, 0.25);
-  --accent2-glow: rgba(34, 211, 238, 0.2);
+  --accent:       #00d4ff;
+  --accent2:      #0066ff;
+  --accent-glow:  rgba(0, 212, 255, 0.25);
+  --accent2-glow: rgba(0, 102, 255, 0.2);
   --radius-sm:    8px;
   --radius-md:    16px;
   --radius-lg:    24px;
   --transition:   0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  --font-display: 'Clash Display', sans-serif;
-  --font-body:    'Satoshi', sans-serif;
-  --font-mono:    'JetBrains Mono', monospace;
-  --cursor-dot:   #fff;
-  --cursor-ring:  rgba(255, 255, 255, 0.3);
-  --cursor-ring-hover: rgba(255, 255, 255, 0.6);
+  --font-display: 'JetBrains Mono', 'Fira Code', monospace;
+  --font-body:    'Inter', sans-serif;
+  --font-mono:    'JetBrains Mono', 'Fira Code', monospace;
+  --cursor-dot:   #00d4ff;
+  --cursor-ring:  rgba(0, 212, 255, 0.3);
+  --cursor-ring-hover: rgba(0, 212, 255, 0.6);
 }
 
-/* ── Dark Theme (Default) ──────────────────────────────────────── */
+/* ── Dark Theme (Default) — Deep Navy-Black Terminal ────────────── */
 [data-theme="dark"] {
-  --bg:           #0A0A0F;
-  --bg2:          #0E0E16;
-  --bg3:          #14141F;
-  --text:         #E8E8F2;
-  --text2:        #8888A8;
-  --text3:        #555570;
-  --card:         rgba(255, 255, 255, 0.03);
-  --card-hover:   rgba(255, 255, 255, 0.06);
-  --border:       rgba(255, 255, 255, 0.06);
-  --border-hover: rgba(99, 102, 241, 0.5);
-  --bar-bg:       rgba(255, 255, 255, 0.06);
-  --nav-bg:       rgba(10, 10, 15, 0.85);
+  --bg:           #0a0e1a;
+  --bg2:          #0d1225;
+  --bg3:          #111830;
+  --text:         #e2e8f0;
+  --text2:        #7a8ba8;
+  --text3:        #4a5568;
+  --card:         rgba(0, 212, 255, 0.03);
+  --card-hover:   rgba(0, 212, 255, 0.06);
+  --border:       rgba(0, 212, 255, 0.08);
+  --border-hover: rgba(0, 212, 255, 0.4);
+  --bar-bg:       rgba(0, 212, 255, 0.06);
+  --nav-bg:       rgba(10, 14, 26, 0.88);
   --shadow:       0 8px 32px rgba(0, 0, 0, 0.8);
-  --shadow-accent: 0 8px 40px rgba(99, 102, 241, 0.15);
+  --shadow-accent: 0 8px 40px rgba(0, 212, 255, 0.12);
 }
 
-/* ── Light Theme ───────────────────────────────────────────────── */
+/* ── Light Theme — Soft blue complement ────────────────────────── */
 [data-theme="light"] {
-  --bg:           #F8F8F6;
-  --bg2:          #EEEEEA;
-  --bg3:          #E4E4DE;
-  --text:         #1A1A24;
-  --text2:        #55556A;
-  --text3:        #9090A8;
-  --card:         rgba(0, 0, 0, 0.03);
-  --card-hover:   rgba(0, 0, 0, 0.06);
-  --border:       rgba(0, 0, 0, 0.1);
-  --border-hover: rgba(99, 102, 241, 0.5);
-  --bar-bg:       rgba(0, 0, 0, 0.08);
-  --nav-bg:       rgba(240, 240, 245, 0.7);
+  --bg:           #f0f4f8;
+  --bg2:          #e2e8f0;
+  --bg3:          #d5dde8;
+  --text:         #0a0e1a;
+  --text2:        #3a4a5e;
+  --text3:        #7a8ba8;
+  --card:         rgba(0, 102, 255, 0.04);
+  --card-hover:   rgba(0, 102, 255, 0.08);
+  --border:       rgba(0, 102, 255, 0.12);
+  --border-hover: rgba(0, 212, 255, 0.5);
+  --bar-bg:       rgba(0, 102, 255, 0.08);
+  --nav-bg:       rgba(240, 244, 248, 0.85);
   --shadow:       0 8px 32px rgba(0, 0, 0, 0.1);
-  --shadow-accent: 0 8px 40px rgba(99, 102, 241, 0.12);
-  --cursor-dot:   #0a0a0f;
-  --cursor-ring:  rgba(10, 10, 15, 0.3);
-  --cursor-ring-hover: rgba(10, 10, 15, 0.6);
+  --shadow-accent: 0 8px 40px rgba(0, 212, 255, 0.12);
+  --cursor-dot:   #0a0e1a;
+  --cursor-ring:  rgba(10, 14, 26, 0.3);
+  --cursor-ring-hover: rgba(10, 14, 26, 0.6);
 }
 
 /* ══════════════════════════════════════════════════════════════════
@@ -97,19 +97,47 @@ body {
   }
 }
 
-/* ── Scrollbar ─────────────────────────────────────────────────── */
-::-webkit-scrollbar { width: 3px; }
+/* ── Scanline overlay — subtle CRT effect (3-5% opacity) ──────── */
+body::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 9999;
+  background: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 2px,
+    rgba(0, 212, 255, 0.015) 2px,
+    rgba(0, 212, 255, 0.015) 4px
+  );
+  opacity: 1;
+}
+
+/* ── Scrollbar — thin cyan track ──────────────────────────────── */
+::-webkit-scrollbar { width: 4px; }
 ::-webkit-scrollbar-track { background: var(--bg); }
-::-webkit-scrollbar-thumb { background: var(--accent); border-radius: 2px; }
+::-webkit-scrollbar-thumb {
+  background: var(--accent);
+  border-radius: 2px;
+  box-shadow: 0 0 6px rgba(0, 212, 255, 0.3);
+}
+
+/* Firefox scrollbar */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--accent) var(--bg);
+}
 
 /* ══════════════════════════════════════════════════════════════════
-   TYPOGRAPHY
+   TYPOGRAPHY — Developer DNA
    ══════════════════════════════════════════════════════════════════ */
 
 .font-display { font-family: var(--font-display); }
 .font-body    { font-family: var(--font-body); }
 .font-mono    { font-family: var(--font-mono); }
 
+/* ── Section index label (e.g. "01 — ABOUT") — styled as terminal prompt ── */
 .section-index {
   font-family: var(--font-mono);
   font-size: 12px;
@@ -120,6 +148,7 @@ body {
   margin-bottom: 8px;
 }
 
+/* ── Section title — comment-prefixed with blinking cursor ─────── */
 .section-title {
   font-family: var(--font-display);
   font-size: clamp(28px, 4.5vw, 48px);
@@ -128,6 +157,26 @@ body {
   line-height: 1.1;
   margin-bottom: 14px;
   color: var(--text);
+  position: relative;
+}
+
+/* // prefix — terminal comment style */
+.section-title::before {
+  content: '// ';
+  color: var(--accent);
+  opacity: 0.5;
+  font-weight: 400;
+}
+
+/* Blinking cursor after section titles */
+.section-title::after {
+  content: '█';
+  color: var(--accent);
+  font-size: 0.6em;
+  margin-left: 4px;
+  animation: terminal-blink 1.2s step-end infinite;
+  opacity: 0.7;
+  font-weight: 400;
 }
 
 .section-subtitle {
@@ -158,7 +207,7 @@ body {
 }
 
 /* ══════════════════════════════════════════════════════════════════
-   CARDS
+   CARDS — Glass morphism with cyan border glow
    ══════════════════════════════════════════════════════════════════ */
 
 .glass-card {
@@ -178,23 +227,30 @@ body {
 }
 
 /* ══════════════════════════════════════════════════════════════════
-   CHIPS / BADGES
+   CHIPS / BADGES — Code token styling
    ══════════════════════════════════════════════════════════════════ */
 
 .chip {
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  background: rgba(99, 102, 241, 0.08);
-  border: 1px solid rgba(99, 102, 241, 0.2);
+  background: rgba(0, 212, 255, 0.08);
+  border: 1px solid rgba(0, 212, 255, 0.25);
   color: var(--accent);
   padding: 4px 14px;
-  border-radius: 999px;
+  border-radius: 4px;               /* squared-off for code-token look */
   font-size: 12px;
   font-weight: 600;
   font-family: var(--font-mono);
   white-space: nowrap;
   transition: all 0.3s ease;
+  text-shadow: 0 0 8px rgba(0, 212, 255, 0);
+}
+
+.chip:hover {
+  text-shadow: 0 0 8px rgba(0, 212, 255, 0.35);
+  border-color: rgba(0, 212, 255, 0.5);
+  background: rgba(0, 212, 255, 0.12);
 }
 
 .chip img {
@@ -203,19 +259,30 @@ body {
 }
 
 .chip--cyan {
-  background: rgba(34, 211, 238, 0.08);
-  border-color: rgba(34, 211, 238, 0.2);
+  background: rgba(0, 102, 255, 0.08);
+  border-color: rgba(0, 102, 255, 0.25);
   color: var(--accent2);
 }
 
+.chip--cyan:hover {
+  text-shadow: 0 0 8px rgba(0, 102, 255, 0.35);
+  border-color: rgba(0, 102, 255, 0.5);
+  background: rgba(0, 102, 255, 0.12);
+}
+
 .chip--purple {
-  background: rgba(124, 58, 237, 0.08);
-  border-color: rgba(124, 58, 237, 0.2);
-  color: #a78bfa;
+  background: rgba(0, 212, 255, 0.06);
+  border-color: rgba(0, 212, 255, 0.2);
+  color: #7dd3fc;
+}
+
+.chip--purple:hover {
+  text-shadow: 0 0 8px rgba(125, 211, 252, 0.35);
+  border-color: rgba(0, 212, 255, 0.35);
 }
 
 /* ══════════════════════════════════════════════════════════════════
-   BUTTONS
+   BUTTONS — Terminal command style
    ══════════════════════════════════════════════════════════════════ */
 
 .btn {
@@ -224,9 +291,10 @@ body {
   gap: 8px;
   padding: 14px 28px;
   border-radius: var(--radius-sm);
-  font-family: var(--font-body);
+  font-family: var(--font-mono);      /* monospace for terminal feel */
   font-weight: 600;
-  font-size: 15px;
+  font-size: 14px;
+  letter-spacing: 0.02em;
   cursor: pointer;
   text-decoration: none;
   transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
@@ -235,15 +303,24 @@ body {
   overflow: hidden;
 }
 
+/* Terminal prompt prefix on all buttons */
+.btn::before {
+  content: '> ';
+  opacity: 0.5;
+  font-weight: 400;
+}
+
 .btn--primary {
-  background: linear-gradient(135deg, var(--accent), #818CF8);
+  background: linear-gradient(135deg, var(--accent2), var(--accent));
   color: #fff;
   box-shadow: 0 4px 20px var(--accent-glow);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
 }
 
 .btn--primary:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 32px var(--accent-glow);
+  box-shadow: 0 8px 32px var(--accent-glow), 0 0 20px rgba(0, 212, 255, 0.15);
+  text-shadow: 0 0 8px rgba(0, 212, 255, 0.55);
 }
 
 .btn--outline {
@@ -257,6 +334,7 @@ body {
   color: var(--accent);
   transform: translateY(-2px);
   box-shadow: 0 4px 20px var(--accent-glow);
+  text-shadow: 0 0 8px rgba(0, 212, 255, 0.55);
 }
 
 .btn--sm {
@@ -270,13 +348,18 @@ body {
   padding: 8px 16px;
 }
 
+/* Ghost buttons don't get terminal prefix */
+.btn--ghost::before {
+  content: none;
+}
+
 .btn--ghost:hover {
   color: var(--accent);
-  background: rgba(99, 102, 241, 0.06);
+  background: rgba(0, 212, 255, 0.06);
 }
 
 /* ══════════════════════════════════════════════════════════════════
-   INPUTS
+   INPUTS — Terminal-styled form fields
    ══════════════════════════════════════════════════════════════════ */
 
 .input {
@@ -300,10 +383,12 @@ body {
 
 .input::placeholder {
   color: var(--text3);
+  font-family: var(--font-mono);
+  font-size: 13px;
 }
 
 /* ══════════════════════════════════════════════════════════════════
-   GLOW DOT
+   GLOW DOT — Available indicator
    ══════════════════════════════════════════════════════════════════ */
 
 .glow-dot {
@@ -319,8 +404,15 @@ body {
    KEYFRAMES
    ══════════════════════════════════════════════════════════════════ */
 
+/* Original blink for typewriter cursor */
 @keyframes blink {
   0%, 100% { opacity: 1; }
+  50%       { opacity: 0; }
+}
+
+/* Terminal block cursor blink for section titles */
+@keyframes terminal-blink {
+  0%, 100% { opacity: 0.7; }
   50%       { opacity: 0; }
 }
 
@@ -362,8 +454,14 @@ body {
   to   { transform: translateX(0); }
 }
 
+/* Spin for loader */
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
 /* ══════════════════════════════════════════════════════════════════
-   NAV LINK
+   NAV LINK — Terminal-style with ./ prefix
    ══════════════════════════════════════════════════════════════════ */
 
 .nav-link {
@@ -375,28 +473,38 @@ body {
   font-size: 13px;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  transition: color 0.3s ease;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
   background: none;
   border: none;
-  font-family: var(--font-body);
+  font-family: var(--font-mono);     /* monospace for developer feel */
+}
+
+/* ./ prefix on each nav item */
+.nav-link::before {
+  content: './';
+  opacity: 0.4;
+  margin-right: 2px;
+  font-weight: 400;
+  color: var(--accent);
 }
 
 .nav-link:hover,
 .nav-link.active {
   color: var(--text);
+  text-shadow: 0 0 8px rgba(0, 212, 255, 0.35);
 }
 
 /* ══════════════════════════════════════════════════════════════════
-   CATEGORY BUTTONS
+   CATEGORY BUTTONS — Code tab style
    ══════════════════════════════════════════════════════════════════ */
 
 .cat-btn {
   padding: 8px 22px;
-  border-radius: 999px;
+  border-radius: 4px;               /* sharper corners — code tab feel */
   border: 1.5px solid var(--border);
   background: transparent;
   color: var(--text2);
-  font-family: var(--font-body);
+  font-family: var(--font-mono);     /* monospace */
   font-size: 13px;
   font-weight: 600;
   cursor: pointer;
@@ -407,14 +515,16 @@ body {
 
 .cat-btn.active {
   background: var(--accent);
-  color: #fff;
+  color: #0a0e1a;
   border-color: var(--accent);
   box-shadow: 0 4px 16px var(--accent-glow);
+  text-shadow: none;
 }
 
 .cat-btn:hover:not(.active) {
   border-color: var(--accent);
   color: var(--accent);
+  text-shadow: 0 0 8px rgba(0, 212, 255, 0.35);
 }
 
 /* ══════════════════════════════════════════════════════════════════
@@ -476,7 +586,7 @@ body {
 }
 
 /* ══════════════════════════════════════════════════════════════════
-   TILT CARD GLOW BORDER
+   TILT CARD GLOW BORDER — Cyan conic gradient
    ══════════════════════════════════════════════════════════════════ */
 
 .tilt-card-wrapper {
@@ -522,7 +632,7 @@ body {
 }
 
 /* ══════════════════════════════════════════════════════════════════
-   TIMELINE
+   TIMELINE — Cyan accent
    ══════════════════════════════════════════════════════════════════ */
 
 .timeline-line {
@@ -544,6 +654,7 @@ body {
   background: var(--accent);
   border: 3px solid var(--bg);
   z-index: 2;
+  box-shadow: 0 0 8px rgba(0, 212, 255, 0.3);
 }
 
 .timeline-dot::after {
@@ -557,12 +668,58 @@ body {
 }
 
 /* ══════════════════════════════════════════════════════════════════
+   HERO — Grid-dot overlay for developer DNA aesthetic
+   ══════════════════════════════════════════════════════════════════ */
+
+#hero {
+  position: relative;
+}
+
+/* Grid-dot pattern overlay on hero (3-5% opacity) */
+#hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(
+    circle,
+    rgba(0, 212, 255, 0.07) 1px,
+    transparent 1px
+  );
+  background-size: 32px 32px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* ══════════════════════════════════════════════════════════════════
+   GLOW HOVER EFFECTS — Accent elements get cyan text-shadow
+   ══════════════════════════════════════════════════════════════════ */
+
+/* Accent-colored elements glow on hover */
+a:hover,
+button:hover {
+  text-shadow: 0 0 8px rgba(0, 212, 255, 0.25);
+}
+
+/* Stronger glow on interactive elements with accent color */
+.nav-link:hover,
+.cat-btn:hover,
+.chip:hover,
+.btn:hover {
+  text-shadow: 0 0 8px rgba(0, 212, 255, 0.55);
+}
+
+/* ══════════════════════════════════════════════════════════════════
    RESPONSIVE
    ══════════════════════════════════════════════════════════════════ */
 
 @media (max-width: 768px) {
   .hide-mobile { display: none !important; }
   .section-wrapper { padding: 70px 20px; }
+
+  /* Smaller comment prefix on mobile */
+  .section-title::before {
+    font-size: 0.7em;
+  }
 }
 
 @media (min-width: 769px) {

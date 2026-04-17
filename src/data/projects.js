@@ -32,24 +32,42 @@ export const projectsData = [
     icon: "🎬"
   },
   {
-  id: "cognify-ai-learning",
-  title: "Cognify",
-  title_en: "Cognify",
-  description: "Application web intelligente qui améliore la qualité d’apprentissage en organisant les contenus en modules, en générant des sessions de révision basées sur le spaced repetition, en proposant des recommandations personnalisées et en intégrant un chatbot expert par module.",
-  description_en: "An intelligent web application that enhances learning quality by organizing content into modules, generating spaced repetition-based revision sessions, providing personalized recommendations, and integrating an expert chatbot for each module.",
+  id: "fitpro",
+  title: "FitPro",
+  title_en: "FitPro",
+  description: "Application web de fitness combinant une vitrine moderne et une boutique en ligne permettant de découvrir des programmes d’entraînement et d’acheter des produits liés au fitness.",
+  description_en: "A fitness web application combining a modern showcase website and an online store where users can explore workout programs and purchase fitness-related products.",
   tech: [
-    "Next.js",
-    "React.js",
-    "Tailwind CSS",
-    "Node.js",
-    "PostgreSQL",
-    "pgvector",
-    "OpenAI API"
+    "HTML",
+    "CSS",
+    "JavaScript",
+    "Bootstrap"
   ],
-  github: "https://github.com/mohammedelmanssouri71-commits/Cognify",
-  demo: null, // Ajouter un lien si disponible
+  github: "https://github.com/mohammedelmanssouri71-commits/FitPro", 
+  demo: "https://fit-pro-pi.vercel.app/",
+  inProgress: false,
+  accentColor: "#FFA447",
+  icon: "💪"
+  }, 
+  {
+  id: "postview",
+  title: "PostView",
+  title_en: "PostView",
+  description: "Application web inspirée des réseaux sociaux permettant aux utilisateurs de publier des posts, interagir avec d’autres utilisateurs, gérer une liste d’amis et communiquer en temps réel via un système de chat intégré.",
+  description_en: "A social media-inspired web application that allows users to create posts, interact with others, manage a friends list, and communicate in real-time through an integrated chat system.",
+  tech: [
+    "HTML",
+    "CSS",
+    "JavaScript",
+    "JQuery",
+    "Bootstrap",
+    "PHP",
+    "MySQL"
+  ],
+  github: null, 
+  demo: null, 
   inProgress: true,
-  accentColor: "#7c3aed", // violet moderne (IA)
-  icon: "🧠"
+  accentColor: "#3b82f6",
+  icon: "💬"
 }
 ];

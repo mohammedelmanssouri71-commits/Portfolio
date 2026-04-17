@@ -189,9 +189,9 @@ export function Hero() {
           position: "absolute",
           inset: 0,
           background:
-            "radial-gradient(ellipse at 20% 50%, rgba(99,102,241,0.08) 0%, transparent 50%), " +
-            "radial-gradient(ellipse at 80% 20%, rgba(34,211,238,0.06) 0%, transparent 50%), " +
-            "radial-gradient(ellipse at 50% 80%, rgba(99,102,241,0.04) 0%, transparent 50%)",
+            "radial-gradient(ellipse at 20% 50%, rgba(0,212,255,0.08) 0%, transparent 50%), " +
+            "radial-gradient(ellipse at 80% 20%, rgba(0,102,255,0.06) 0%, transparent 50%), " +
+            "radial-gradient(ellipse at 50% 80%, rgba(0,212,255,0.04) 0%, transparent 50%)",
           backgroundSize: "200% 200%",
           animation: "gradient-breathe 15s ease infinite",
           pointerEvents: "none",

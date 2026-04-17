@@ -33,7 +33,7 @@ export function PageTransition({ children }) {
               right: 0,
               bottom: 0,
               zIndex: 10000,
-              background: "#0A0A0F",
+              background: "#0a0e1a",
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
